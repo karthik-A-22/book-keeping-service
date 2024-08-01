@@ -1,5 +1,9 @@
 {
   "welcome_message": "Welcome to Book Keeping API",
+  "unauthorized_no_token": "No token provided",
+  "unauthorized_user_not_found": "User not found",
+  "unauthorized_invalid_token": "Invalid token",
+  "server_error": "Server error",
   "register": {
     "userExists": "User already exists",
     "success": "User registered successfully",
