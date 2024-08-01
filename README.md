@@ -55,7 +55,7 @@ This project is a Library Management System built using Node.js, Express, MongoD
 2. **Firebase Configuration**
    Place your Firebase service account key in the root directory:
    ```
-   secure/
+   root/
    └── firebase-service-account-key.json
    ```
 
