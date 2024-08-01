@@ -20,7 +20,7 @@ app.use('/api/borrowers', borrowRoutes);
 app.use('/api/library', libraryRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to Book Keeping API')
+    res.send(req.t('welcome_message'))
 })
 
 

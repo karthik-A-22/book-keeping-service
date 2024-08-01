@@ -1,4 +1,5 @@
 {
+  "welcome_message": "Welcome to Book Keeping API",
   "register": {
     "userExists": "User already exists",
     "success": "User registered successfully",
