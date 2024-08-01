@@ -1,5 +1,5 @@
 const Library = require('../models/Library');
-const Book = require('../models/Book');
+const Book = require('../models/Books');
 
 // Retrieve a list of all libraries
 exports.getLibraries = async (req, res) => {
