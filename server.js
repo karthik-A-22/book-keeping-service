@@ -17,7 +17,7 @@ app.use(i18nextHttpMiddleware.handle(i18next));
 app.use('/api/users', userRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/borrowers', borrowRoutes);
-app.use('/api/library', libraryRoutes);
+app.use('/api/libraries', libraryRoutes);
 
 app.get('/', (req, res) => {
     res.send(req.t('welcome_message'))
