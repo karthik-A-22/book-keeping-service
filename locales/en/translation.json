@@ -1,0 +1,44 @@
+{
+  "register": {
+    "userExists": "User already exists",
+    "success": "User registered successfully",
+    "error": "Error registering user"
+  },
+  "login": {
+    "invalidCredentials": "Invalid email or password",
+    "error": "Error logging in"
+  },
+  "book": {
+    "error_fetching_books": "Error fetching books.",
+    "book_not_found": "Book not found.",
+    "error_fetching_book": "Error fetching the book.",
+    "no_image_provided": "No image provided.",
+    "error_creating_book": "Error creating the book.",
+    "error_updating_book": "Error updating the book.",
+    "book_deleted": "Book deleted successfully."
+  },
+  "borrow": {
+    "bookNotFound": "Book not found.",
+    "alreadyBorrowed": "This book is already borrowed.",
+    "libraryNotFound": "Library not found.",
+    "bookNotInLibrary": "The book is not in this library's inventory.",
+    "success": "Book borrowed successfully.",
+    "error": "Error borrowing the book."
+  },
+  "return": {
+    "bookNotFound": "Book not found.",
+    "notBorrowedByUser": "This book was not borrowed by the user.",
+    "success": "Book returned successfully.",
+    "error": "Error returning the book."
+  },
+  "library": {
+    "error": "Error processing the request.",
+    "notFound": "Library not found.",
+    "created": "Library created successfully.",
+    "updated": "Library updated successfully.",
+    "deleted": "Library deleted successfully.",
+    "bookNotFound": "Book not found.",
+    "bookAdded": "Book added to inventory successfully.",
+    "bookRemoved": "Book removed from inventory successfully."
+  }
+}
