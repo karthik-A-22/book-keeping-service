@@ -1,4 +1,3 @@
-// controllers/bookController.js
 const Book = require('../models/Books');
 const Library = require('../models/Library');
 const User = require('../models/User');
@@ -8,7 +7,10 @@ const { uploadImageToFirebase } = require('../utils/firebase');
 exports.getAllBooks = async (req, res) => {
     try {
         const books = await Book.find().populate('author library borrower');
-        res.json(books);
+        res.json({
+            message: req.t('books_fetched_successfully'),
+            data: books
+        });
     } catch (err) {
         res.status(500).json({ message: req.t('error_fetching_books') });
     }
@@ -19,7 +21,10 @@ exports.getBookById = async (req, res) => {
     try {
         const book = await Book.findById(req.params.id).populate('author library borrower');
         if (!book) return res.status(404).json({ message: req.t('book_not_found') });
-        res.json(book);
+        res.json({
+            message: req.t('book_fetched_successfully'),
+            data: book
+        });
     } catch (err) {
         res.status(500).json({ message: req.t('error_fetching_book') });
     }
@@ -39,7 +44,10 @@ exports.createBook = async (req, res) => {
 
         const book = new Book({ title, author, library, coverImage });
         await book.save();
-        res.status(201).json(book);
+        res.status(201).json({
+            message: req.t('book_created_successfully'),
+            data: book
+        });
     } catch (err) {
         res.status(500).json({ message: req.t('error_creating_book') });
     }
@@ -60,7 +68,10 @@ exports.updateBook = async (req, res) => {
 
         const book = await Book.findByIdAndUpdate(req.params.id, updateData, { new: true });
         if (!book) return res.status(404).json({ message: req.t('book_not_found') });
-        res.json(book);
+        res.json({
+            message: req.t('book_updated_successfully'),
+            data: book
+        });
     } catch (err) {
         res.status(500).json({ message: req.t('error_updating_book') });
     }
@@ -71,7 +82,9 @@ exports.deleteBook = async (req, res) => {
     try {
         const book = await Book.findByIdAndDelete(req.params.id);
         if (!book) return res.status(404).json({ message: req.t('book_not_found') });
-        res.json({ message: req.t('book_deleted') });
+        res.json({
+            message: req.t('book_deleted_successfully')
+        });
     } catch (err) {
         res.status(500).json({ message: req.t('error_deleting_book') });
     }

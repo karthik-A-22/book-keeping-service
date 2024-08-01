@@ -5,7 +5,7 @@ const Book = require('../models/Books');
 exports.getLibraries = async (req, res) => {
     try {
         const libraries = await Library.find();
-        res.json(libraries);
+        res.json({ message: req.t('library.fetchedAll'), libraries });
     } catch (err) {
         res.status(500).json({ message: req.t('library.error') });
     }
@@ -23,7 +23,7 @@ exports.getLibraryById = async (req, res) => {
             return res.status(404).json({ message: req.t('library.notFound') });
         }
 
-        res.json(library);
+        res.json({ message: req.t('library.fetchedById'), library });
     } catch (err) {
         res.status(500).json({ message: req.t('library.error') });
     }
@@ -87,7 +87,7 @@ exports.getLibraryInventory = async (req, res) => {
             return res.status(404).json({ message: req.t('library.notFound') });
         }
 
-        res.json(library.books);
+        res.json({ message: req.t('library.inventoryFetched'), books: library.books });
     } catch (err) {
         res.status(500).json({ message: req.t('library.error') });
     }

@@ -30,7 +30,10 @@ exports.borrowBook = async (req, res) => {
         book.borrower = req.user._id;
         await book.save();
 
-        res.status(200).json({ message: req.t('borrow.success') });
+        res.status(200).json({
+            message: req.t('borrow.success'),
+            book
+        });
     } catch (error) {
         res.status(500).json({ message: req.t('borrow.error') });
     }
@@ -54,7 +57,10 @@ exports.returnBook = async (req, res) => {
         book.borrower = null;
         await book.save();
 
-        res.status(200).json({ message: req.t('return.success') });
+        res.status(200).json({
+            message: req.t('return.success'),
+            book
+        });
     } catch (error) {
         res.status(500).json({ message: req.t('return.error') });
     }

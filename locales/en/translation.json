@@ -11,6 +11,7 @@
   },
   "login": {
     "invalidCredentials": "Invalid email or password",
+    "success": "Login successful",
     "error": "Error logging in"
   },
   "book": {
@@ -20,7 +21,11 @@
     "no_image_provided": "No image provided.",
     "error_creating_book": "Error creating the book.",
     "error_updating_book": "Error updating the book.",
-    "book_deleted": "Book deleted successfully."
+    "book_deleted": "Book deleted successfully.",
+    "books_fetched_successfully": "Books fetched successfully",
+    "book_fetched_successfully": "Book fetched successfully",
+    "book_created_successfully": "Book created successfully",
+    "book_updated_successfully": "Book updated successfully"
   },
   "borrow": {
     "bookNotFound": "Book not found.",
@@ -37,13 +42,16 @@
     "error": "Error returning the book."
   },
   "library": {
-    "error": "Error processing the request.",
-    "notFound": "Library not found.",
-    "created": "Library created successfully.",
-    "updated": "Library updated successfully.",
-    "deleted": "Library deleted successfully.",
-    "bookNotFound": "Book not found.",
-    "bookAdded": "Book added to inventory successfully.",
-    "bookRemoved": "Book removed from inventory successfully."
+    "fetchedAll": "Libraries fetched successfully",
+    "fetchedById": "Library details fetched successfully",
+    "created": "Library created successfully",
+    "updated": "Library updated successfully",
+    "deleted": "Library deleted successfully",
+    "inventoryFetched": "Library inventory fetched successfully",
+    "bookAdded": "Book added to inventory successfully",
+    "bookRemoved": "Book removed from inventory successfully",
+    "notFound": "Library not found",
+    "bookNotFound": "Library or book not found",
+    "error": "Error processing request"
   }
 }
