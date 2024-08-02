@@ -5,6 +5,7 @@
   "unauthorized_invalid_token": "अमान्य टोकन",
   "server_error": "सर्वर त्रुटि",
   "unauthorized_token_expired": "टोकन समाप्त हो गया है",
+  "users_fetched_successfully": "उपयोगकर्ताओं ने सफलतापूर्वक प्राप्त किया",
   "register": {
     "userExists": "उपयोगकर्ता पहले से मौजूद है",
     "success": "उपयोगकर्ता सफलतापूर्वक पंजीकृत हो गया",

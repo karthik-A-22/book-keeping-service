@@ -4,6 +4,7 @@
   "unauthorized_user_not_found": "User not found",
   "unauthorized_invalid_token": "Invalid token",
   "unauthorized_token_expired": "Token has expired",
+  "users_fetched_successfully": "Users fetched successfully",
   "server_error": "Server error",
   "register": {
     "userExists": "User already exists",
