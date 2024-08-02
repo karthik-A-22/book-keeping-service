@@ -27,6 +27,8 @@ exports.authenticate = async (req, res, next) => {
         // Check if the error is related to token verification
         if (err.name === 'JsonWebTokenError') {
             return res.status(401).json({ message: req.t('unauthorized_invalid_token') });
+        } else if (err.name === 'TokenExpiredError') {
+            return res.status(401).json({ message: req.t('unauthorized_token_expired') });
         }
 
         // Handle other possible errors

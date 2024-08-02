@@ -3,6 +3,7 @@
   "unauthorized_no_token": "No token provided",
   "unauthorized_user_not_found": "User not found",
   "unauthorized_invalid_token": "Invalid token",
+  "unauthorized_token_expired": "Token has expired",
   "server_error": "Server error",
   "register": {
     "userExists": "User already exists",
